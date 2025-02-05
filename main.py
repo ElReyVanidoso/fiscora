@@ -14,8 +14,8 @@ def main():
         return
     
     # 2) Compute rolling MAs in your DataFrame
-    df['ShortMA'] = df['Close'].rolling(window=20).mean()
-    df['LongMA'] = df['Close'].rolling(window=50).mean()
+    df['ShortMA'] = df['Close'].rolling(20).mean()
+    df['LongMA'] = df['Close'].rolling(50).mean()
     
     # 3) Initialize the backtest engine
     engine = BacktestEngine(initial_capital=10000.0)
